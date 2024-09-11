@@ -1,3 +1,19 @@
+### Update Course 3 : add Models ###
+## Home page 
+![plot](./screenshots_application/homepage2.png)
+The user interface from the homepage is the same but it changed in the code : I defined a model to store my list of elements.
+
+## Blog page
+![plot](./screenshots_application/blog.png)
+![plot](./screenshots_application/blog_singlePost.png)
+I added a new page : the blog page.
+I defined a model where I add articles that in found on the web which explain why it is usefull and good to make lists.
+
+## Contacts page
+![plot](./screenshots_application/contacts.png)
+It remains the same as before, it didn't change
+
+### First commit + Add component ###
 ## Header of the application
 I defined the header of the application in a component to display it on every page.
 When you click on the ITS logo you are redirected to the ITS website.

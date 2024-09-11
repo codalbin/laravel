@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Post;
+use App\Models\TasksList;
+use Illuminate\Support\Arr ;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,12 +25,23 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Home page', 'tasks' => TasksList::all()]);
 });
 Route::get('/home', function () {
-    return view('home');
+    return view('home', ['title' => 'Home page', 'tasks' => TasksList::all()]);
 })->name('home');
 
 Route::get('/contacts', function () {
-    return view('contacts');
+    return view('contacts', ['title' => 'Contacts']);
 })->name('contacts');
+
+Route::get('/blog', function () {
+    return view('blog', ['title' => 'Blog', 'posts' => Post::all()]);
+})->name('blog');
+
+Route::get('/blog/{slug}', function($slug){
+
+    $post = Post::find($slug);
+
+    return view ('post', ['title' => 'Single post', 'post' => $post]) ;
+});
