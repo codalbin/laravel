@@ -1,31 +1,31 @@
-### Update Course 3 : add Models ###
-## Home page 
+# Update Course 3 : add Models #
+### Home page ###
 ![plot](./screenshots_application/homepage2.png)
-The user interface from the homepage is the same but it changed in the code : I defined a model to store my list of elements.
+The user interface from the homepage is the same but it has changed in the code : I defined a model to store my list of elements.
 
-## Blog page
+### Blog page ###
 ![plot](./screenshots_application/blog.png)
 ![plot](./screenshots_application/blog_singlePost.png)
 I added a new page : the blog page.
-I defined a model where I add articles that in found on the web which explain why it is usefull and good to make lists.
+I defined a model where I add articles that I found on the web which explain why it is usefull and good to make lists.
 
-## Contacts page
+### Contacts page ###
 ![plot](./screenshots_application/contacts.png)
-It remains the same as before, it didn't change
+It remains the same as before, didn't change
 
-### First commit + Add component ###
-## Header of the application
+# First commit + Add component #
+### Header of the application ###
 I defined the header of the application in a component to display it on every page.
 When you click on the ITS logo you are redirected to the ITS website.
 
-## Home page 
+### Home page ###
 ![plot](./screenshots_application/homepage.png)
 
 This is the first version of my application's homepage. 
 I imagine that my application will be used to manage to-do tasks.
 For now you can only check a task already writting.
 
-## Contacts page 
+### Contacts page ###
 ![plot](./screenshots_application/contacts.png)
 
 I created this page to imagine that the user can contact a support for any question.
