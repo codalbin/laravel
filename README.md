@@ -1,7 +1,7 @@
 ### Update Course 4 : use Database ###
 Nothing has change in the visuals of the application but the structure has been changed.
 
-Now the data from the articles are not in the model anymore but they have been added to the database.
+Now the data from the articles and from the homepage list are not in the models anymore but they have been added to the database.
 A MySQL databse is used but we add data manually in it (for now).
 
 ### Update Course 3 : add Models ###
