@@ -39,9 +39,10 @@ Route::get('/blog', function () {
     return view('blog', ['title' => 'Blog', 'posts' => Post::all()]);
 })->name('blog');
 
-Route::get('/blog/{slug}', function($slug){
+// Change id by slug if we define data in Model
+Route::get('/blog/{post:slug}', function(Post $post){
 
-    $post = Post::find($slug);
+    // $post = Post::find($id);
 
     return view ('post', ['title' => 'Single post', 'post' => $post]) ;
 });
