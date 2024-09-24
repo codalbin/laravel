@@ -1,3 +1,10 @@
+### Update Course 5 : use Factory ###
+Now I can generate random articles in my blog (title, date, author, slug and text are random)
+Still 1 problem : text doesn't generate in english but I don't try how to fix it
+![plot](./screenshots_application/blog_course5.png)
+
+Other pages didn't change
+
 ### Update Course 4 : use Database ###
 Nothing has change in the visuals of the application but the structure has been changed.
 

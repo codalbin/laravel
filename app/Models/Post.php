@@ -4,14 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model ; 
 use Illuminate\Support\Arr ;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Carbon\Carbon;
 
 class Post extends Model {
     // Commente everything because it's now defined in the DB
+    use HasFactory;
 
     protected $table = 'posts' ; // Use the table we want (default : posts)
     protected $primaryKey = 'id' ; // Define the primary key (default : id)
 
     protected $fillable = ['id', 'slug', 'title', 'date', 'author', 'body'] ; // Fields to protect so we can add data with tinker
+
+    // Convert date in Carbon to consider it as a date and not as a string
+    protected $casts = [
+        'date' => 'datetime',
+    ];
     
     // public static function all() {
     //     return [
