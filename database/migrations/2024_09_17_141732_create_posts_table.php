@@ -15,7 +15,13 @@ return new class extends Migration
             // We use the parameters defined in the Model
             $table->id();
             $table->string('title');
-            $table->string('author');
+            // $table->string('author');
+            $table->foreignId('author_id')->constrained( // Connect with a foreign Id table (because the author is the user)
+                table:'users',
+                indexName: 'posts_author_id'
+            );
+            // $table->unsignedBigInteger('author_id');
+            // $table->foreign('author_id')->references('id')->on('users'); // Connect directly the author id with the post id with a foreign key
             $table->date('date');
             $table->string('slug')->unique();
             $table->text('body');

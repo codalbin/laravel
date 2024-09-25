@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model ; 
+use Illuminate\Database\Eloquent\Relations\BelongsTo ; 
 use Illuminate\Support\Arr ;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Carbon\Carbon;
@@ -21,6 +22,10 @@ class Post extends Model {
         'date' => 'datetime',
     ];
     
+    public function author(): BelongsTo { // Permet d'accéder à l'auteur depuis l'article 
+        return $this->belongsTo(User::class) ;
+    }
+
     // public static function all() {
     //     return [
     //         [

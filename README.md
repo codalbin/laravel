@@ -1,7 +1,11 @@
-### Update Course 5 : use Factory ###
+### Update Course 5 : use Factory and Eloquent Relationship ###
 Now I can generate random articles in my blog (title, date, author, slug and text are random)
 Still 1 problem : text doesn't generate in english but I don't try how to fix it
 ![plot](./screenshots_application/blog_course5.png)
+
+The article and the author are now linked => the article is created by an author from the users database.
+When you click on the author of an article, there is a new page with all the articles from this author.
+![plot](./screenshots_application/articles_author.png)
 
 Other pages didn't change
 
