@@ -20,6 +20,10 @@ return new class extends Migration
                 table:'users',
                 indexName: 'posts_author_id'
             );
+            $table->foreignId('category_id')->constrained( // Connect with a foreign Id table (because the author is the user)
+                table:'categories',
+                indexName: 'posts_category_id'
+            );
             // $table->unsignedBigInteger('author_id');
             // $table->foreign('author_id')->references('id')->on('users'); // Connect directly the author id with the post id with a foreign key
             $table->date('date');

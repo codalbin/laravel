@@ -7,6 +7,10 @@ The article and the author are now linked => the article is created by an author
 When you click on the author of an article, there is a new page with all the articles from this author.
 ![plot](./screenshots_application/articles_author.png)
 
+The articles are generating related to a category. Each article is linked to a category.
+When you click on a category, a new page has been created to diaply all the articles from this category.
+![plot](./screenshots_application/articles_category.png)
+
 Other pages didn't change
 
 ### Update Course 4 : use Database ###
