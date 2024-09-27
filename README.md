@@ -1,4 +1,4 @@
-### Update Course 5 : use Factory and Eloquent Relationship ###
+### Update Course 5 : use Factory + Eloquent Relationship + Seeder ###
 Now I can generate random articles in my blog (title, date, author, slug and text are random)
 Still 1 problem : text doesn't generate in english but I don't try how to fix it
 ![plot](./screenshots_application/blog_course5.png)
@@ -10,6 +10,8 @@ When you click on the author of an article, there is a new page with all the art
 The articles are generating related to a category. Each article is linked to a category.
 When you click on a category, a new page has been created to diaply all the articles from this category.
 ![plot](./screenshots_application/articles_category.png)
+
+Seeders have been created to more easily generate data. One seeder for autors, one for category and one for posts. 
 
 Other pages didn't change
 
