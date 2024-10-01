@@ -38,7 +38,9 @@ Route::get('/contacts', function () {
 })->name('contacts');
 
 Route::get('/blog', function () {
-    return view('blog', ['title' => 'Blog', 'posts' => Post::all()]);
+    // $posts = Post::with(['author', 'category'])->latest()->get() ; // A la place de all() on met ça pour ne pas tout charger, uniquement ceux qui sont en haut de la page
+    $posts = Post::latest()->get() ; // Ajoute le with dans le Post.php
+    return view('blog', ['title' => 'Blog', 'posts' => $posts]);
 })->name('blog');
 
 // Change id by slug if we define data in Model
@@ -50,9 +52,11 @@ Route::get('/blog/{post:slug}', function(Post $post){
 });
 
 Route::get('/authors/{user:username}', function(User $user){
-    return view ('blog', ['title' => count($user->posts) . ' Articles by ' . $user->name, 'posts' => $user->posts]) ;
+    $posts = $user->posts->load('category', 'author') ;
+    return view ('blog', ['title' => count($posts) . ' Articles by ' . $user->name, 'posts' => $user->posts]) ;
 });
 
 Route::get('/categories/{category:slug}', function(Category $category){
-    return view ('blog', ['title' => 'Articles in: ' . $category->name, 'posts' => $category->posts]) ;
+    $posts = $category->posts->load('category', 'author') ;
+    return view ('blog', ['title' => 'Articles in: ' . $category->name, 'posts' => $posts]) ;
 });

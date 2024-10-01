@@ -21,6 +21,9 @@ class Post extends Model {
     protected $casts = [
         'date' => 'datetime',
     ];
+
+    //To reduce the Queries number
+    protected $with = ['author', 'category'] ;
     
     public function author(): BelongsTo { // Permet d'accéder à l'auteur depuis l'article 
         return $this->belongsTo(User::class) ;

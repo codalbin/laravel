@@ -1,3 +1,6 @@
+### Update Course 6 : N+1 ###
+Reduce the number of queries by making advance requests. Imported a package to visualize the number of queries.
+
 ### Update Course 5 : use Factory + Eloquent Relationship + Seeder ###
 Now I can generate random articles in my blog (title, date, author, slug and text are random)
 Still 1 problem : text doesn't generate in english but I don't try how to fix it
