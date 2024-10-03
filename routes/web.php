@@ -38,7 +38,7 @@ Route::get('/contacts', function () {
 })->name('contacts');
 
 Route::get('/blog', function () {
-    return view('blog', ['title' => 'Blog', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->get()]); // utilise la fonction scopeFilter dans Post.php
+    return view('blog', ['title' => 'Blog', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->paginate(9)]); // utilise la fonction scopeFilter dans Post.php
 
     // $posts = Post::with(['author', 'category'])->latest()->get() ; // A la place de all() on met ça pour ne pas tout charger, uniquement ceux qui sont en haut de la page
     // $posts = Post::latest()->get() ; // Ajoute le with dans le Post.php

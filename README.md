@@ -1,4 +1,4 @@
-### Update Course 6 : N+1, Redesign UI, Searching ###
+### Update Course 6 : N+1, Redesign UI, Searching, Pagination ###
 Reduce the number of queries by making advance requests. Imported a package to visualize the number of queries.
 
 I used a new template from tailwind for my blog page and my post page.
@@ -12,6 +12,9 @@ New interface for post page
 Add the possibility to search article by writting a word from the title
 New interface for blo page
 ![plot](./screenshots_application/blog_course_6_bis.png)
+
+Devide the blog page with pagination (9 articles per page)
+![plot](./screenshots_application/blog_course_6_ter.png)
 
 ### Update Course 5 : use Factory + Eloquent Relationship + Seeder ###
 Now I can generate random articles in my blog (title, date, author, slug and text are random)
