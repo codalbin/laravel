@@ -1,5 +1,13 @@
-### Update Course 6 : N+1 ###
+### Update Course 6 : N+1, Redesign UI ###
 Reduce the number of queries by making advance requests. Imported a package to visualize the number of queries.
+
+I used a new template from tailwind for my blog page and my post page.
+
+New interface for blog page
+![plot](./screenshots_application/blog_course6.png)
+
+New interface for post page
+![plot](./screenshots_application/single_post_course6.png)
 
 ### Update Course 5 : use Factory + Eloquent Relationship + Seeder ###
 Now I can generate random articles in my blog (title, date, author, slug and text are random)

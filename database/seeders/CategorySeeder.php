@@ -17,17 +17,20 @@ class CategorySeeder extends Seeder
 
         Category::create([
             'name' => 'Literature',
-            'slug' => 'ltr'
+            'slug' => 'ltr',
+            'color' => 'red'
         ]);
 
         Category::create([
             'name' => 'Sport',
-            'slug' => 'sprt'
+            'slug' => 'sprt',
+            'color' => 'green'
         ]);
 
         Category::create([
             'name' => 'Education',
-            'slug' => 'edu'
+            'slug' => 'edu',
+            'color' => 'blue'
         ]);
     }
 }
